@@ -72,7 +72,7 @@ empresas = arr[:, 1]  # 2ª coluna (índice 1)
 custos = arr[:, 6]    # 7ª coluna (índice 6) 
 
 # filtrar apenas as missões da SpaceX
-indicesSpaceX = np.where(empresas == 'SpaceX')[0]  # Use [0] para acessar o array de índices
+indicesSpaceX = np.where(empresas == 'SpaceX')
 
 if len(indicesSpaceX) > 0:
     custos_float = np.array([converterFloat(custo) for custo in custos])
@@ -80,13 +80,11 @@ if len(indicesSpaceX) > 0:
     # índice da missão mais cara da SpaceX
     indiceMaisCara = np.argmax(custos_float[indicesSpaceX])
 
-    # nome da missão mais cara da SpaceX
-    missaoMaisCara = arr[indicesSpaceX][indiceMaisCara][0]
 
     # custo da missão mais cara da SpaceX
     custoMaisCara = custos_float[indicesSpaceX][indiceMaisCara]
 
-    print(f"A missão mais cara da SpaceX foi '{missaoMaisCara}' com um custo de {custoMaisCara:.2f} dólares.")
+print(f"A missão mais cara da SpaceX foi com um custo de {custoMaisCara:.2f} dólares.")
 
 delimiter()
 
