@@ -16,7 +16,6 @@ def converterFloat(valor):
 
 # Exercício 1
 
-
 print(f'Exercício 1')
 
 idades = arr[:, 1]
