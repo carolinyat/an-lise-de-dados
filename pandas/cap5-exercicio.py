@@ -3,7 +3,7 @@ import pandas as pd
 def delimiter():
     print('---------------------------------')
 
-paises = pd.read_csv('arquivos/paises.csv', dedelimiter=';')
+paises = pd.read_csv('arquivos/paises.csv', delimiter=';')
 
 # Questão 1 a)
 print(f'Questão 1 - letra a)')
