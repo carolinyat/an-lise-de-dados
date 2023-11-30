@@ -29,6 +29,6 @@ plt.bar(countries, counts, color=['blue', 'red'])
 plt.xlabel('País')
 plt.ylabel('Número de Empresas Espaciais')
 plt.title('Número de Empresas Espaciais nos EUA e na China')
-# plt.show()
+plt.show()
 
 delimiter()
